@@ -1,7 +1,10 @@
+#set a console font. this command may vary by distro
+
+sudo setfont /usr/share/kbd/consolefonts/ter-114n.psf.gz
+
 #logic to see if nvim is already running so you can open a new terminal window inside nvim and it will open in ~
 #rather than opening nvim and closing when you quit nvim
-fi
-sudo setfont /usr/share/kbd/consolefonts/ter-114n.psf.gz
+
 if [[ $- == *i* && ! $INSIDE_NVIM ]]; then
   export INSIDE_NVIM=true
   exec nvim
